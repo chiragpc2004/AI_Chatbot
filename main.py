@@ -19,7 +19,7 @@ client = OpenAI(
 )
 
 # Streamlit UI
-st.title("💬 OpenRouter Chatbot")
+st.title("💬 Chirag's Chatbot")
 st.caption("Powered by Streamlit + OpenRouter")
 
 # Session state to hold chat history

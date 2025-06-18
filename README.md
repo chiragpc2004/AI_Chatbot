@@ -1,75 +1,92 @@
-# 🧠 CLI Chatbot using OpenRouter AI
 
-This is a simple Python-based command-line chatbot that uses [OpenRouter](https://openrouter.ai/) as the backend for AI-powered responses. It uses the `openai` Python SDK to interact with custom models hosted via OpenRouter, such as DeepSeek's `qwen3-8b`.
+# 💬 OpenRouter Streamlit Chatbot
+
+This is a simple and powerful chatbot web application built using [Streamlit](https://streamlit.io/) and [OpenRouter](https://openrouter.ai/) with the `openai` Python SDK. It supports interactive chat with memory using models like DeepSeek's Qwen3.
 
 ---
 
 ## 🚀 Features
 
-- Communicates with OpenRouter's AI models
-- Runs in the terminal (CLI)
-- Easy to customize model and prompt behavior
-- Exit anytime with `exit`, `quit`, or `bye`
+- 🔁 Persistent chat history (session state)
+- 🧠 Powered by OpenRouter + `openai` SDK
+- 💻 Clean web UI with Streamlit
+- 🔐 Uses `.env` or Streamlit Cloud secrets for API key management
 
 ---
 
-## 🛠️ Requirements
+## 📦 Installation
 
-- Python 3.7+
-- `openai` Python package
-
-Install dependencies:
+### 1. Clone the repo
 
 ```bash
-pip install openai
+git clone https://github.com/your-username/openrouter-chatbot
+cd openrouter-chatbot
 ```
 
----
-
-## 🧾 Usage
-
-1. **Update the script** with your API key (from [OpenRouter](https://openrouter.ai/)).
-2. Run the chatbot:
+### 2. Install dependencies
 
 ```bash
-python chatbot.py
+pip install -r requirements.txt
 ```
 
-3. Type your questions or prompts.
-4. Exit with: `exit`, `quit`, or `bye`.
-
----
-
-## 📄 Example
+### 3. Create a `.env` file
 
 ```bash
-You: What's the capital of France?
-AI: The capital of France is Paris.
+touch .env
+```
 
-You: bye
-Exiting the chat.
+And add your API key:
+
+```
+OPENROUTER_API_KEY=sk-or-your-api-key-here
 ```
 
 ---
 
-## 🔐 Security Note
+## 🧪 Run Locally
 
-Do **not** hardcode or share your API keys in public repositories. Use `.env` files or environment variables in production.
+```bash
+streamlit run main.py
+```
 
 ---
 
-## 💡 Tip
+## ☁️ Deploy on Streamlit Cloud
 
-You can change the model by modifying the line:
+1. Push to a GitHub repo.
+2. Go to [https://streamlit.io/cloud](https://streamlit.io/cloud)
+3. Connect your GitHub → Select your repo.
+4. In **"Advanced settings"**, add the environment variable:
 
-```python
-model="deepseek/deepseek-r1-0528-qwen3-8b:free"
+```
+OPENROUTER_API_KEY=sk-or-your-api-key-here
 ```
 
-Check [OpenRouter Models](https://openrouter.ai/docs) for more options.
+---
+
+## 📝 Example Prompt
+
+> You: Hello!  
+>  
+> AI: Hi there! How can I assist you today?
+
+---
+
+## 📄 File Structure
+
+```
+├── main.py
+├── .env
+├── requirements.txt
+└── README.md
+```
 
 ---
 
 ## 📬 License
 
-This project is licensed under the MIT License.
+MIT License. Feel free to fork, improve, and share!
+
+---
+
+**Made with ❤️ using Streamlit + OpenRouter**
