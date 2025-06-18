@@ -1,5 +1,5 @@
 
-# 💬 OpenRouter Streamlit Chatbot
+# 💬 Chirag's Chatbot
 
 This is a simple and powerful chatbot web application built using [Streamlit](https://streamlit.io/) and [OpenRouter](https://openrouter.ai/) with the `openai` Python SDK. It supports interactive chat with memory using models like DeepSeek's Qwen3.
 
