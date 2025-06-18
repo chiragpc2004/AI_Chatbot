@@ -1,11 +1,7 @@
-import os
 import streamlit as st
-from dotenv import load_dotenv
 from openai import OpenAI
 
-# Load environment variables
-load_dotenv()
-api_key = os.getenv("OPENROUTER_API_KEY")
+api_key = st.secrets["OPENROUTER_API_KEY"]
 
 # Validate API key
 if api_key is None:
