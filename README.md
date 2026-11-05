@@ -88,5 +88,3 @@ OPENROUTER_API_KEY=sk-or-your-api-key-here
 MIT License. Feel free to fork, improve, and share!
 
 ---
-
-**Made with ❤️ using Streamlit + OpenRouter**
